@@ -4,6 +4,6 @@ using UnityEngine;
 
 public abstract class Puzzle : MonoBehaviour
 {
-    public abstract void CheckSolution();
+    public abstract bool CheckSolution();
     public abstract void SolutionAction();
 }

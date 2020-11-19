@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OtherPuzzle : Puzzle
 {
-    public override void CheckSolution()
+    public override bool CheckSolution()
     {
         throw new System.NotImplementedException();
     }

@@ -6,7 +6,7 @@ public class WordPuzzle : Puzzle
 {
     [SerializeField] private string code;
 
-    public override void CheckSolution()
+    public override bool CheckSolution()
     {
         throw new System.NotImplementedException();
     }

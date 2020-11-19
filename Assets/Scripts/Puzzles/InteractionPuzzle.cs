@@ -6,7 +6,7 @@ public class InteractionPuzzle : Puzzle
 {
     [SerializeField] private GameObject item;
 
-    public override void CheckSolution()
+    public override bool CheckSolution()
     {
         throw new System.NotImplementedException();
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class NumberPuzzle : Puzzle
 {
     [SerializeField] private int code;
-    public override void CheckSolution()
+    public override bool CheckSolution()
     {
         throw new System.NotImplementedException();
     }

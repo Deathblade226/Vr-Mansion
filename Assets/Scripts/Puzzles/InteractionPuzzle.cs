@@ -34,9 +34,4 @@ public class InteractionPuzzle : Puzzle
         collider = null;
 
     }
-
-    private void OnTriggerExit(Collider other)
-    {
-
-    }
 }

@@ -19,9 +19,10 @@ public class PlacementPuzzle : Puzzle
     }
     public override bool CheckSolution()
     {
-        bool isSolved = true;
+        bool isSolved = false;
         if(items.Intersect(addedObjects).Count() == items.Count())
         {
+            isSolved = true;
             for (int i = 0; i < items.Count; i++)
             {
                 if(locations[i].transform.position != addedObjects[i].transform.position)
@@ -41,5 +42,18 @@ public class PlacementPuzzle : Puzzle
     public void ObjectAdded(GameObject objectAdded)
     {
         addedObjects.Add(objectAdded);
+    }    
+    
+    public void ObjectRemoved(GameObject objectRemoved)
+    {
+        addedObjects.Remove(objectRemoved);
+    }
+
+    private void Update()
+    {
+        if(CheckSolution())
+        {
+            Debug.Log("Bookshelf Puzzle Solved");
+        }
     }
 }

@@ -6,10 +6,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class InteractionPuzzle : Puzzle
 {
-    [System.Serializable]
-    public class InteractionEvent : UnityEvent { }
-
-    public InteractionEvent onInteraction = new InteractionEvent();
 
     [SerializeField] private GameObject item;
     private Collider collider = null;
@@ -30,7 +26,7 @@ public class InteractionPuzzle : Puzzle
 
     public override void SolutionAction()
     {
-        throw new System.NotImplementedException();
+        onPuzzleSolved.Invoke();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -38,7 +34,7 @@ public class InteractionPuzzle : Puzzle
         collider = other;
         if (CheckSolution())
         {
-            onInteraction.Invoke();
+            SolutionAction();
         }
         collider = null;
     }

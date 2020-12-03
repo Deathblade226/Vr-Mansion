@@ -128,6 +128,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 913343374882498960, guid: 599abec3a7e8ec44da5fb84b2141baa9,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 913343374882498974, guid: 599abec3a7e8ec44da5fb84b2141baa9,
         type: 3}
       propertyPath: m_ModelTransform
@@ -207,6 +212,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ModelTransform
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 913343375333128130, guid: 599abec3a7e8ec44da5fb84b2141baa9,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 599abec3a7e8ec44da5fb84b2141baa9, type: 3}

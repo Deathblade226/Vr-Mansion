@@ -10,11 +10,9 @@ public class PlacementPuzzle : Puzzle
 
     private List<GameObject> addedObjects = new List<GameObject>();
 
-    [SerializeField] private bool doesItemLocationsMatter;
-
     private void OnValidate()
     {
-        if (items.Count != locations.Count)
+        if(items.Count != locations.Count)
         {
             Debug.LogWarning("Items and Locations need to be the size to work properly.");
         }
@@ -22,30 +20,14 @@ public class PlacementPuzzle : Puzzle
     public override bool CheckSolution()
     {
         bool isSolved = false;
-        if (items.Intersect(addedObjects).Count() == items.Count())
+        if(items.Intersect(addedObjects).Count() == items.Count())
         {
-            if (doesItemLocationsMatter)
+            isSolved = true;
+            for (int i = 0; i < items.Count; i++)
             {
-                isSolved = true;
-                for (int i = 0; i < items.Count; i++)
+                if(locations[i].transform.position != addedObjects[i].transform.position)
                 {
-                    if (locations[i].transform.position != addedObjects[i].transform.position)
-                    {
-                        isSolved = false;
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                isSolved = true;
-                foreach (GameObject addedObject in addedObjects)
-                {
-                    if (!items.Contains(addedObject))
-                    {
-                        isSolved = false;
-                        break;
-                    }
+                    isSolved = false;
                 }
             }
         }
@@ -60,8 +42,8 @@ public class PlacementPuzzle : Puzzle
     public void ObjectAdded(GameObject objectAdded)
     {
         addedObjects.Add(objectAdded);
-    }
-
+    }    
+    
     public void ObjectRemoved(GameObject objectRemoved)
     {
         addedObjects.Remove(objectRemoved);
@@ -69,7 +51,7 @@ public class PlacementPuzzle : Puzzle
 
     private void Update()
     {
-        if (CheckSolution())
+        if(CheckSolution())
         {
             Debug.Log("Bookshelf Puzzle Solved");
         }

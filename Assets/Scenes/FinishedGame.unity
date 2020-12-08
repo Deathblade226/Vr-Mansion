@@ -427,6 +427,11 @@ PrefabInstance:
       propertyPath: m_AttachTransform
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3443678468080621631, guid: 7e48abb1adb622e4a92f7b4786d3685a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.15
+      objectReference: {fileID: 0}
     - target: {fileID: 3443678468211840446, guid: 7e48abb1adb622e4a92f7b4786d3685a,
         type: 3}
       propertyPath: m_AttachTransform
@@ -436,6 +441,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AttachTransform
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443678468280557502, guid: 7e48abb1adb622e4a92f7b4786d3685a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 3443678468433657500, guid: 7e48abb1adb622e4a92f7b4786d3685a,
         type: 3}
@@ -532,6 +542,11 @@ PrefabInstance:
       propertyPath: onPuzzleSolved.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3443678468717302184, guid: 7e48abb1adb622e4a92f7b4786d3685a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.15
+      objectReference: {fileID: 0}
     - target: {fileID: 3443678468717302187, guid: 7e48abb1adb622e4a92f7b4786d3685a,
         type: 3}
       propertyPath: m_AttachTransform
@@ -541,6 +556,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AttachTransform
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3809427172909416169, guid: 7e48abb1adb622e4a92f7b4786d3685a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3809427172909416169, guid: 7e48abb1adb622e4a92f7b4786d3685a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3809427172909416169, guid: 7e48abb1adb622e4a92f7b4786d3685a,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4184057833967416893, guid: 7e48abb1adb622e4a92f7b4786d3685a,
         type: 3}
@@ -645,7 +675,7 @@ PrefabInstance:
     - target: {fileID: 4184057834234645187, guid: 7e48abb1adb622e4a92f7b4786d3685a,
         type: 3}
       propertyPath: onPuzzleSolved.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 255,255,255,255
+      value: 125,79,255,255
       objectReference: {fileID: 0}
     - target: {fileID: 4184057834234645187, guid: 7e48abb1adb622e4a92f7b4786d3685a,
         type: 3}

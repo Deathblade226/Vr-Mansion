@@ -19,7 +19,7 @@ public class ChangeLight : MonoBehaviour
                     rgbValues[i] = rgbValue;
                 }
             }
-            lightToChange.color = new Color(rgbValues[0], rgbValues[1], rgbValues[2], rgbValues[4]);
+            lightToChange.color = new Color(rgbValues[0], rgbValues[1], rgbValues[2], rgbValues[3]);
         }
     }
 }

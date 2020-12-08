@@ -20,6 +20,7 @@ public class ChangeLight : MonoBehaviour
                 }
             }
             lightToChange.color = new Color(rgbValues[0], rgbValues[1], rgbValues[2], rgbValues[3]);
+            lightToChange.intensity = 0.01f;
         }
     }
 }

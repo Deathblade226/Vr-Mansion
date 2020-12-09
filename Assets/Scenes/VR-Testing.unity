@@ -533,6 +533,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dabc3b2de5b7144aa719327433a752d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPuzzleSolved:
+    m_PersistentCalls:
+      m_Calls: []
   item: {fileID: 646504315}
 --- !u!65 &111125643
 BoxCollider:
@@ -594,6 +597,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e84628cb3fec5a449a02402f75890ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPuzzleSolved:
+    m_PersistentCalls:
+      m_Calls: []
   code: 01000000020000000300000004000000
 --- !u!65 &169176001
 BoxCollider:
@@ -4320,7 +4326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 8979467c96326ee40bae920cddee803f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 8979467c96326ee40bae920cddee803f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4392,6 +4398,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b96a226665785bb4585557d33f058840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPuzzleSolved:
+    m_PersistentCalls:
+      m_Calls: []
   items:
   - {fileID: 1374398769}
   - {fileID: 1263726895}
@@ -4402,6 +4411,7 @@ MonoBehaviour:
   - {fileID: 760008357}
   - {fileID: 501479672}
   - {fileID: 1669572983}
+  isLocationsImportant: 0
 --- !u!65 &1720644567
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5554,43 +5564,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1988670325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988670321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fc463878a7c49847bd5c547bc6ffcd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 1185467042}
-  m_InteractionLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_AttachTransform: {fileID: 1988670328}
-  m_StartingSelectedInteractable: {fileID: 0}
-  m_OnHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ShowInteractableHoverMeshes: 1
-  m_InteractableHoverMeshMaterial: {fileID: 0}
-  m_InteractableCantHoverMeshMaterial: {fileID: 0}
-  m_SocketActive: 1
-  m_InteractableHoverScale: 1
-  m_RecycleDelayTime: 1
-  AcceptedType: 
 --- !u!4 &1988670328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: f99df1970d4b71441a320ce6acc52709,

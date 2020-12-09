@@ -10,9 +10,11 @@ public class PlacementPuzzle : Puzzle
 
     private List<GameObject> addedObjects = new List<GameObject>();
 
+    [SerializeField] private bool isLocationsImportant = false;
+
     private void OnValidate()
     {
-        if(items.Count != locations.Count)
+        if (items.Count != locations.Count)
         {
             Debug.LogWarning("Items and Locations need to be the size to work properly.");
         }
@@ -20,30 +22,31 @@ public class PlacementPuzzle : Puzzle
     public override bool CheckSolution()
     {
         bool isSolved = false;
-        if(items.Intersect(addedObjects).Count() == items.Count())
-        {
-            isSolved = true;
+        isSolved = true;
+        //if (isLocationsImportant)
+        //{
             for (int i = 0; i < items.Count; i++)
             {
-                if(locations[i].transform.position != addedObjects[i].transform.position)
+                if (locations[i].transform.position != items[i].transform.position)
                 {
                     isSolved = false;
                 }
             }
-        }
+        //}
+
         return isSolved;
     }
 
     public override void SolutionAction()
     {
-        throw new System.NotImplementedException();
+        onPuzzleSolved.Invoke();
     }
 
     public void ObjectAdded(GameObject objectAdded)
     {
         addedObjects.Add(objectAdded);
-    }    
-    
+    }
+
     public void ObjectRemoved(GameObject objectRemoved)
     {
         addedObjects.Remove(objectRemoved);
@@ -51,9 +54,9 @@ public class PlacementPuzzle : Puzzle
 
     private void Update()
     {
-        if(CheckSolution())
+        if (CheckSolution())
         {
-            Debug.Log("Bookshelf Puzzle Solved");
+            SolutionAction();
         }
     }
 }
